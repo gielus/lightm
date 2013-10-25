@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>LightM</title>
+
+<script src="jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="/style.css" />
+<script >
+	function toggle(toggle, value)
+	{
+		$("#R"+toggle).css({'background-color':'orange'});
+		$("#overlay").toggle( true );
+
+		$.post("cgi-bin/toggle.py",
+		{"toggle": toggle},
+		function (data) {
+			$("#overlay").toggle( false );
+			$("#R"+toggle).css({'background-color':'yellow'});
+		});
+	}
+</script>
+</head>
+<body>
+<div id='overlay' style='display:none;'></div>
+<div id='container'>
+	<div class = 'button right' onclick="toggle('LED');" id='RLED'>LED</div>
+	<div class = 'button left' onclick="toggle('BANK');" id='RBANK'>BANK</div>
+	<div class = 'button right' onclick="toggle('KAST');" id='RKAST'>KAST</div>
+	<div class = 'button right' onclick="toggle('ALL');" id='RALL'>ALL</div>
+</div>
+</body>
+</html>

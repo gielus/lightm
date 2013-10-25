@@ -1,0 +1,47 @@
+body {
+
+	margin:0px;
+	padding:0px;
+
+}
+
+div#container {
+
+	margin:0px;
+	background-color:transparent;
+	width:950px;
+	padding:50px 10px;
+	z-index:50;
+	position:absolute;
+}
+div#overlay {
+	width:1080px;
+	height:1900px;
+	background-color:grey;
+	opacity:.5;
+	z-index:100;
+	position:absolute;
+}
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+div.button {
+	margin-bottom:50px;
+	width:400px;
+	height:250px;
+	background-color:yellow;
+	border:10px solid blue;
+	border-radius: 25px;
+	padding:25px;
+	text-align:center;
+	vertical-align: middle;
+}
+
+div.button:hover{
+	background-color:orange;
+}
