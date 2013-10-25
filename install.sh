@@ -2,11 +2,11 @@
 
 ROOTPATH=/usr/local/bin/lightm
 
-if [ ! -f $ROOTPATH ]; then
+if [ ! -d $ROOTPATH ]; then
 	mkdir -p $ROOTPATH/web/cgi-bin
 fi
 
-if [ ! -f "/etc/lightm/" ]; then
+if [ ! -d "/etc/lightm/" ]; then
 	mkdir "/etc/lightm/"
 fi
 
@@ -20,5 +20,5 @@ cp lightm.py $ROOTPATH/web/cgi-bin
 cp cgi-bin/toggle.py $ROOTPATH/web/cgi-bin/
 
 
-cp lightm-config /etc/lightm/lights.conf
+cp lights.conf /etc/lightm/lights.conf
 
